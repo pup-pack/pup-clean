@@ -13,7 +13,10 @@
 [![Links](https://github.com/denisecase/pup-clean/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/denisecase/pup-clean/actions/workflows/links.yml)
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/denisecase/pup-clean/security)
 
-<img src="docs/images/pup.png" alt="pup-clean logo" width="110">
+<img
+src="https://raw.githubusercontent.com/denisecase/pup-clean/main/docs/images/pup.png"
+alt="pup logo"
+width="110">
 
 > Opinionated professional Python repository cleaner
 
@@ -47,9 +50,6 @@ uvx pup-clean project.log data/prepared/sales.csv
 # delete only specified detected cleanup targets (CAUTION: DESTRUCTIVE)
 uvx pup-clean --delete project.log data/prepared/sales.csv docs/images/sales_by_region.png
 ```
-
-Dry run is the default.
-Nothing is deleted unless `--delete` is explicitly provided.
 
 ## Developer Command Reference
 
@@ -109,6 +109,10 @@ git push -u origin main
 ```
 
 </details>
+
+## Documentation
+
+- [Documentation](https://denisecase.github.io/pup-clean/)
 
 ## Annotations
 
