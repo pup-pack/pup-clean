@@ -2,68 +2,107 @@
 
 <img src="images/pup.png" alt="pup-clean logo" width="110">
 
-`pup-clean` brings a Python repository up to a managed professional baseline.
+`pup-clean` prepares completed instructor Python repositories for release as
+student project templates.
 
+It removes known disposable development residue and inspects project source
+code to identify generated artifacts created by the instructor solution.
 It is designed for repositories that follow repeatable professional patterns
 but still contain local, project-specific work.
-The tool updates shared repository infrastructure from canonical templates
-while preserving source code, tests, notebooks, data, documentation,
-and other project-specific surfaces unless those areas are explicitly managed.
 
 ## Purpose
 
-Many professional Python repositories share the same infrastructure:
+Instructor repositories often contain files produced while developing,
+running, testing, documenting, and verifying a completed project.
 
-- editor and Git configuration
-- ignore and line-ending rules
-- Markdown, YAML, and link-checking configuration
-- Python tooling configuration
-- documentation tooling configuration
-- continuous integration workflows
-- release and package validation surfaces
+Examples include:
 
-Keeping those files synchronized by hand is error-prone.
-`pup-clean` makes the shared parts explicit, repeatable, and reviewable.
+- `project.log`
+- test, lint, and coverage artifacts
+- build and distribution output
+- generated documentation sites
+- prepared data files
+- generated databases and data warehouses
+- generated charts and images
+- other artifacts explicitly written by project source code
 
-## Design Model
+These files may be useful while developing and verifying the instructor
+solution but should not necessarily be included when the repository is
+released for student use.
 
-`pup-clean` separates repository maintenance into three concerns:
+`pup-clean` identifies these artifacts and provides a reviewable cleanup step
+before release.
 
-1. **Canonical templates** define the standard files and managed content.
-2. **Repository conventions** identify the target repository shape and applicable template layers.
-3. **Repository-specific surfaces** remain local to the project and require human review.
+## Cleanup Model
 
-The tool is intentionally conservative.
-It updates files that are known to be managed and reports
-the areas that require human judgment.
+`pup-clean` uses two complementary mechanisms.
 
-## Template Layers
+1. **Known cleanup targets** identify universal generated development residue
+   such as logs, caches, coverage files, build output, and generated
+   documentation output.
+2. **Source inspection** examines Python files under `src/` and identifies
+   statically resolvable files created by known data-writing,
+   database-writing, and image-writing operations.
 
-Templates are applied as ordered layers.
-Later layers may override files from earlier layers.
+This allows cleanup behavior to follow what a particular project actually
+generates rather than assuming that a directory has the same role in every
+project.
 
-The standard layer model replaces as specificity increases:
+For example, `data/prepared/` may contain generated output in one project and
+serve as input to another. The directory name alone does not determine whether
+its contents should be removed.
 
-- `ALL` for files shared by all repositories.
-- `ALL-PY` for Python repository tooling.
-- `ALL-PY-SRC` for Python repositories with a `src/` package layout.
+## Safety Model
 
-This keeps the baseline additive instead of duplicative.
+Dry run is the default.
 
-## Managed and Preserved Surfaces
+Running:
 
-A managed surface is a file that can be updated from the canonical baseline.
+```shell
+uvx pup-clean
+```
 
-A preserved surface is project-specific and
-should not be overwritten automatically.
-Examples include source code, tests, notebooks, data files,
-SQL files, and project-specific documentation.
+reports detected cleanup targets without deleting anything.
 
-## Long-Term Goal
+Deletion requires an explicit command:
 
-The goal of `pup-clean` is to make repository maintenance boring.
+```shell
+uvx pup-clean --delete
+```
 
-A maintainer should be able to open one repository,
-bring the shared infrastructure up to the current baseline,
-review the remaining project-specific work,
-and continue working on the actual package or software artifact.
+Only known cleanup targets and artifacts confidently discovered from project
+source code are eligible for deletion.
+
+Dynamically constructed or otherwise unresolved output paths are not guessed.
+
+Source inspection identifies exact generated files. It does not remove a
+parent directory merely because that directory contains a generated file.
+
+For example, if project code generates:
+
+```text
+docs/images/sales_by_region.png
+```
+
+that file may be identified for cleanup while other files in `docs/images/`
+remain untouched.
+
+## Instructor Workflow
+
+A typical instructor release workflow is:
+
+1. Complete and run the instructor solution.
+2. Run `uvx pup-clean` and review the detected cleanup targets.
+3. Run `uvx pup-clean --delete` to remove the approved generated artifacts.
+4. Run project checks and tests.
+5. Commit and push the cleaned repository.
+6. Configure the GitHub repository as a template repository for student use.
+
+## Shared Infrastructure
+
+Repository detection and safe repository-relative path handling are provided by
+[`pup-core`](https://github.com/denisecase/pup-core).
+
+## See Also
+
+- [API](./api.md)
