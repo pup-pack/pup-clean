@@ -1,0 +1,48 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
+cff-version: "1.2.0"
+message: "If you use this work, please cite it using the metadata in this file."
+type: software
+
+title: "pup-clean"
+
+# Set version and date-released to match latest git tag or release.
+version: "0.0.4"
+date-released: "2026-08-08"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/denisecase/pup-clean"
+url: "https://github.com/denisecase/pup-clean"
+
+license: MIT
+
+abstract: >
+  Command-line tool for preparing a professional Python teaching repository
+  for student use by removing instructor-generated evidence and artifacts.
+  pup-clean removes known development residue such as project.log and
+  discovers project-specific generated artifacts by inspecting Python source
+  code, allowing the instructor repository to be cleaned before release as
+  a student project template.
+
+keywords:
+  - repository-cleanup
+  - teaching-repositories
+  - project-templates
+  - generated-artifacts
+  - instructor-tooling
+  - python-projects
+  - developer-tooling
+  - command-line-tool
+  - python
+  - uvx
+  - automation

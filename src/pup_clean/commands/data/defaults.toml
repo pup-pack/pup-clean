@@ -1,0 +1,22 @@
+# ============================================================
+# pup-clean default cleanup targets
+# ============================================================
+
+# WHY: These targets are known generated Python/development artifacts.
+# OBS: pup-clean deletes these explicitly listed targets.
+# REQ: It will also inspect the code and delete generated artifacts.
+
+files = [
+    "project.log",
+    ".coverage",
+]
+
+directories = [
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    "build",
+    "dist",
+    "htmlcov",
+    "site",
+]
