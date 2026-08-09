@@ -13,6 +13,12 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.0.5] - 2026-08-09
+
+- updated README and docs/
+
+---
+
 ## [0.0.4] - 2026-08-09
 
 ### Added
@@ -100,7 +106,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/denisecase/pup-up/compare/v0.0.4...HEAD
-[0.0.4]: https://github.com/denisecase/pup-up/releases/tag/v0.0.4
+[Unreleased]: https://github.com/denisecase/pup-clean/compare/v0.0.5...HEAD
+[0.0.5]: https://github.com/denisecase/pup-clean/releases/tag/v0.0.5
+[0.0.4]: https://github.com/denisecase/pup-clean/releases/tag/v0.0.4
 
 <!-- markdownlint-enable MD024 -->
