@@ -101,7 +101,7 @@ A typical instructor release workflow is:
 ## Shared Infrastructure
 
 Repository detection and safe repository-relative path handling are provided by
-[`pup-core`](https://github.com/denisecase/pup-core).
+[`pup-core`](https://github.com/pup-pack/pup-core).
 
 ## See Also
 

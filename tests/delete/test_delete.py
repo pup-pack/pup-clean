@@ -13,10 +13,10 @@ def _repository_context(tmp_path: Path) -> RepositoryContext:
     """Create a repository context for terminal reporting tests."""
     return RepositoryContext(
         root=tmp_path,
-        github_handle="denisecase",
+        github_handle="pup-pack",
         repo_name="example-project",
-        repo_url="https://github.com/denisecase/example-project",
-        site_url="https://denisecase.github.io/example-project/",
+        repo_url="https://github.com/pup-pack/example-project",
+        site_url="https://pup-pack.github.io/example-project/",
         src_package="example_project",
         files=frozenset(),
     )

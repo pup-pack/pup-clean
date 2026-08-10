@@ -1,20 +1,20 @@
 # pup-clean: Professional Python Project: Instructor Repo Cleaner
 
 [![PyPI](https://img.shields.io/pypi/v/pup-clean?logo=pypi&label=pypi)](https://pypi.org/project/pup-clean/)
-[![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://denisecase.github.io/pup-clean/)
-[![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/denisecase/pup-clean)
+[![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://pup-pack.github.io/pup-clean/)
+[![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/pup-pack/pup-clean)
 [![Python 3.15](https://img.shields.io/badge/python-3.15%2B-blue?logo=python)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
 
-[![CI](https://github.com/denisecase/pup-clean/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/denisecase/pup-clean/actions/workflows/ci-python-zensical.yml)
-[![Docs-Deploy](https://github.com/denisecase/pup-clean/actions/workflows/deploy-zensical.yml/badge.svg?branch=main)](https://github.com/denisecase/pup-clean/actions/workflows/deploy-zensical.yml)
-[![Pre-Release](https://github.com/denisecase/pup-clean/actions/workflows/pre-release.yml/badge.svg?branch=main)](https://github.com/denisecase/pup-clean/actions/workflows/pre-release.yml)
-[![Release](https://github.com/denisecase/pup-clean/actions/workflows/release-pypi.yml/badge.svg)](https://github.com/denisecase/pup-clean/actions/workflows/release-pypi.yml)
-[![Links](https://github.com/denisecase/pup-clean/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/denisecase/pup-clean/actions/workflows/links.yml)
-[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/denisecase/pup-clean/security)
+[![CI](https://github.com/pup-pack/pup-clean/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/pup-pack/pup-clean/actions/workflows/ci-python-zensical.yml)
+[![Docs-Deploy](https://github.com/pup-pack/pup-clean/actions/workflows/deploy-zensical.yml/badge.svg?branch=main)](https://github.com/pup-pack/pup-clean/actions/workflows/deploy-zensical.yml)
+[![Pre-Release](https://github.com/pup-pack/pup-clean/actions/workflows/pre-release.yml/badge.svg?branch=main)](https://github.com/pup-pack/pup-clean/actions/workflows/pre-release.yml)
+[![Release](https://github.com/pup-pack/pup-clean/actions/workflows/release-pypi.yml/badge.svg)](https://github.com/pup-pack/pup-clean/actions/workflows/release-pypi.yml)
+[![Links](https://github.com/pup-pack/pup-clean/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/pup-pack/pup-clean/actions/workflows/links.yml)
+[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/pup-pack/pup-clean/security)
 
 <img
-src="https://raw.githubusercontent.com/denisecase/pup-clean/main/docs/images/pup.png"
+src="https://raw.githubusercontent.com/pup-pack/pup-clean/main/docs/images/pup.png"
 alt="pup logo"
 width="110">
 
@@ -61,7 +61,7 @@ uvx pup-clean --delete project.log data/prepared/sales.csv docs/images/sales_by_
 Open a machine terminal where you want the project:
 
 ```shell
-git clone https://github.com/denisecase/pup-clean
+git clone https://github.com/pup-pack/pup-clean
 
 cd pup-clean
 code .
@@ -112,7 +112,7 @@ git push -u origin main
 
 ## Documentation
 
-- [Documentation](https://denisecase.github.io/pup-clean/)
+- [Documentation](https://pup-pack.github.io/pup-clean/)
 
 ## Annotations
 

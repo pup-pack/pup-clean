@@ -45,7 +45,7 @@ keywords = [
 ]
 
 dependencies = [
-    "pup-core>=0.1.0",
+    "pup-core>=0.1.1",
 ]
 
 [dependency-groups]
@@ -74,11 +74,11 @@ docs = [
 pup-clean = "pup_clean.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/denisecase/pup-clean"
-Repository = "https://github.com/denisecase/pup-clean"
-Documentation = "https://denisecase.github.io/pup-clean/"
-Issues = "https://github.com/denisecase/pup-clean/issues"
-Changelog = "https://github.com/denisecase/pup-clean/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/pup-pack/pup-clean"
+Repository = "https://github.com/pup-pack/pup-clean"
+Documentation = "https://pup-pack.github.io/pup-clean/"
+Issues = "https://github.com/pup-pack/pup-clean/issues"
+Changelog = "https://github.com/pup-pack/pup-clean/blob/main/CHANGELOG.md"
 
 # ============================================================
 # SECTION 2: TOOL CONFIGURATION
@@ -237,7 +237,7 @@ packages = ["src/pup_clean"]
 
 [tool.hatch.version]
 # Used when no git tags are present. Keep in sync with CITATION.cff.
-fallback-version = "0.1.0"
+fallback-version = "0.1.1"
 # WHY: Version is derived from git tags at build time.
 source = "vcs"
 # WHY: Accept semantic-version tags with or without a leading v.
