@@ -17,9 +17,8 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 uv self update
-uv python pin 3.15
 uv lock --upgrade
-uv sync --upgrade
+uv sync
 
 uv run pre-commit install
 uv run pre-commit autoupdate
@@ -32,7 +31,7 @@ uv run pre-commit run --all-files
 # run common chores
 uv run ruff format .
 uv run ruff check . --fix
-uv run python -m pyright
+uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
 

@@ -98,7 +98,7 @@ uv run pup-clean project.log data/prepared/sales.csv
 uv run pup-clean --delete project.log data/prepared/sales.csv docs/images/sales_by_region.png
 
 # types, tests, docs
-uv run python -m pyright
+uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
 

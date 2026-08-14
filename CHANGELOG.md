@@ -13,6 +13,14 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.1.3] - 2026-08-13
+
+- updated actions (one source of python version in project root)
+- updated pyproject.toml
+- deleted pyright; added ty and uv block in pyproject.toml
+
+---
+
 ## [0.1.1] - 2026-08-10
 
 - updated the organization
@@ -85,7 +93,7 @@ uv run pre-commit run --all-files
 uv run pre-commit run --all-files
 
 uv run python -m pytest
-uv run python -m pyright
+uv run ty check
 uv run python -m zensical build
 
 uv run python -c "import shutil; from pathlib import Path; shutil.rmtree(Path('dist'), ignore_errors=True)"
@@ -118,7 +126,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/pup-pack/pup-clean/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/pup-pack/pup-clean/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/pup-pack/pup-clean/releases/tag/v0.1.3
 [0.1.1]: https://github.com/pup-pack/pup-clean/releases/tag/v0.1.1
 [0.1.0]: https://github.com/pup-pack/pup-clean/releases/tag/v0.1.0
 [0.0.5]: https://github.com/pup-pack/pup-clean/releases/tag/v0.0.5
