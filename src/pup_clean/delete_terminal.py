@@ -27,25 +27,23 @@ def print_cleanup_plan(
     """
     mode = "DELETE" if delete else "DRY RUN"
 
-    print(f"[pup-clean] {mode}")  # noqa: T201
-    print(f"[pup-clean] repo: {context.repo_name}")  # noqa: T201
-    print(f"[pup-clean] root: {context.root}")  # noqa: T201
-    print("")  # noqa: T201
+    print(f"[pup-clean] {mode}")
+    print(f"[pup-clean] repo: {context.repo_name}")
+    print(f"[pup-clean] root: {context.root}")
+    print()
 
     if not targets:
-        print("[pup-clean] no cleanup targets found")  # noqa: T201
+        print("[pup-clean] no cleanup targets found")
         return
 
     label = "DELETED" if delete else "WOULD DELETE"
 
     for target in targets:
         suffix = "/" if target.kind == "directory" else ""
-        print(f"{label:13} {target.path.as_posix()}{suffix}")  # noqa: T201
+        print(f"{label:13} {target.path.as_posix()}{suffix}")
 
-    print("")  # noqa: T201
-    print(f"[pup-clean] summary: {len(targets)} cleanup target(s)")  # noqa: T201
+    print()
+    print(f"[pup-clean] summary: {len(targets)} cleanup target(s)")
 
     if not delete:
-        print(  # noqa: T201
-            "[pup-clean] nothing deleted; rerun with --delete to apply cleanup"
-        )
+        print("[pup-clean] nothing deleted; rerun with --delete to apply cleanup")
