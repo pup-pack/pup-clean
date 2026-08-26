@@ -13,6 +13,21 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.2.0] - 2026-08-26
+
+### Changed
+
+- Updated repository inspection and safe-path handling to use `pup-core` 0.2.0.
+- Simplified the package structure by flattening cleanup reporting and
+  generated-artifact inspection modules.
+- Consolidated packaged cleanup configuration under `pup_clean/data/`.
+
+### Removed
+
+- Removed unnecessary `delete/` and `inspect/` package layers.
+
+---
+
 ## [0.1.3] - 2026-08-13
 
 - updated actions (one source of python version in project root)
@@ -44,16 +59,19 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ### Added
 
 - Initial release of `pup-clean`.
-- Added cleanup support for preparing instructor repositories for release as student project templates.
-- Added dry-run cleanup reporting by default with explicit `--delete` required for deletion.
+- Added cleanup support for preparing repositories for release.
+- Added dry-run cleanup reporting by default with
+  explicit `--delete` required for deletion.
 - Added removal of known generated development artifacts such as `project.log`,
   coverage output, caches, build artifacts, and generated documentation output.
-- Added Python source inspection to discover project-specific generated data, database, and image artifacts.
+- Added Python source inspection to discover project-specific
+   generated data, database, and image artifacts.
 - Added static path resolution for generated artifacts referenced through literals,
   `Path` objects, and simple path composition.
 - Added conservative cleanup behavior that deletes only explicitly configured
   or confidently discovered generated artifacts.
-- Added shared repository detection and safe repository-relative path handling using `pup-core`.
+- Added shared repository detection and safe
+  repository-relative path handling using `pup-core`.
 - Added concise terminal reporting of cleanup targets and actions.
 
 ---
@@ -80,7 +98,9 @@ Follow these steps when creating a new release.
 
 ### Task 2. Validate
 
-````shell
+<!-- markdownlint-disable MD013 -->
+
+```shell
 uv lock --upgrade
 uv sync
 uv run pre-commit install
@@ -102,13 +122,15 @@ uv build
 uvx twine check dist/*
 ```
 
+<!-- markdownlint-enable MD013 -->
+
 ### Task 4. Commit, push, tag
 
 ```shell
 git add -A
 git commit -m "Prepare X.Y.Z"
 git push -u origin main
-````
+```
 
 Verify actions run on GitHub. After success:
 
@@ -126,7 +148,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/pup-pack/pup-clean/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/pup-pack/pup-clean/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/pup-pack/pup-clean/releases/tag/v0.2.0
 [0.1.3]: https://github.com/pup-pack/pup-clean/releases/tag/v0.1.3
 [0.1.1]: https://github.com/pup-pack/pup-clean/releases/tag/v0.1.1
 [0.1.0]: https://github.com/pup-pack/pup-clean/releases/tag/v0.1.0

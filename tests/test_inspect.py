@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from pup_clean.inspect.generated import discover_generated_paths
+from pup_clean.inspect_generated import discover_generated_paths
 
 
 def _write_source(root: Path, source: str) -> None:

@@ -1,7 +1,7 @@
 # ============================================================
 # .github/workflows/release-pypi.yml (ALL-PY-SRC-PYPI-REPOS)
 # ============================================================
-# Updated: 2026-08-13
+# Updated: 2026-08-16
 #
 # WHY: Publish a tagged Python package release to PyPI.
 # REQ: Trigger ONLY on version tags like v1.2.3.
@@ -24,8 +24,8 @@ permissions:
   contents: read # WHY: Workflow default is read-only; jobs elevate as needed.
 
 env:
-  PYTHONUNBUFFERED: "1"       # WHY: Real-time logging.
-  PYTHONIOENCODING: "utf-8"   # WHY: Ensure UTF-8 encoding for international characters.
+  PYTHONUNBUFFERED: "1"     # WHY: Real-time logging.
+  PYTHONIOENCODING: "utf-8" # WHY: Ensure UTF-8 encoding for international characters.
 
 concurrency:
   group: release-${{ github.ref }}
@@ -77,13 +77,17 @@ jobs:
           TAG="${{ steps.ver.outputs.plain }}"
           echo "Tag version: $TAG"
           ls dist
+
           if ! ls dist/*"$TAG"*.whl dist/*"$TAG"*.tar.gz >/dev/null 2>&1; then
             echo "ERROR: Downloaded artifact version does not match tag $TAG"
             exit 1
           fi
+
           echo "Artifact version matches tag."
 
-      # === RELEASE AND PUBLISH ===
+      # ============================================================
+      # B) RELEASE AND PUBLISH
+      # ============================================================
 
       - name: B1) Create GitHub Release and upload artifacts
         uses: softprops/action-gh-release@v3

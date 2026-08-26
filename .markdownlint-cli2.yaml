@@ -1,7 +1,7 @@
 # ============================================================
-# .markdownlint-cli2.yaml (ALL-REPOS)
+# .markdownlint-cli2.yaml (ALL-PY-SRC-PYPI-REPOS)
 # ============================================================
-# Updated: 2026-06-27
+# Updated: 2026-08-26
 #
 # WHY: Check authored Markdown while ignoring generated output,
 # dependency directories, virtual environments, caches, and build artifacts.

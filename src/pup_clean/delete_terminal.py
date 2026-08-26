@@ -15,7 +15,16 @@ def print_cleanup_plan(
     *,
     delete: bool,
 ) -> None:
-    """Print the repository cleanup plan."""
+    """Print the repository cleanup plan.
+
+    Args:
+        context (RepositoryContext): The repository context.
+        targets (Sequence[CleanupTarget]): The list of cleanup targets.
+        delete (bool): Whether to actually delete the targets or just perform a dry run.
+
+    Returns:
+        None
+    """
     mode = "DELETE" if delete else "DRY RUN"
 
     print(f"[pup-clean] {mode}")  # noqa: T201

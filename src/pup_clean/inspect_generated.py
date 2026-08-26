@@ -23,8 +23,9 @@ __all__ = ["discover_generated_paths"]
 
 def _load_defaults() -> dict[str, Any]:
     """Load source-inspection defaults from packaged TOML data."""
-    defaults_file = (
-        resources.files("pup_clean.inspect").joinpath("data").joinpath("defaults.toml")
+    defaults_file = resources.files("pup_clean").joinpath(
+        "data",
+        "generated_defaults.toml",
     )
 
     return tomllib.loads(defaults_file.read_text(encoding="utf-8"))
@@ -56,8 +57,6 @@ def discover_generated_paths(root: Path) -> tuple[Path, ...]:
 
     A path is returned only when it can be resolved from source code with
     sufficient confidence. Dynamic or ambiguous paths are ignored.
-
-    Image files are explicitly excluded.
 
     Args:
         root: Repository root.

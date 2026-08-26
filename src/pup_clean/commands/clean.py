@@ -10,16 +10,17 @@ from pup_core.inspect.detect import detect_repository
 from pup_core.paths.safe import safe_repo_path
 
 from pup_clean.base.types import CleanupTarget
-from pup_clean.delete.terminal import print_cleanup_plan
-from pup_clean.inspect.generated import discover_generated_paths
+from pup_clean.delete_terminal import print_cleanup_plan
+from pup_clean.inspect_generated import discover_generated_paths
 
 __all__ = ["run"]
 
 
 def _load_defaults() -> dict[str, Any]:
     """Load explicit cleanup defaults from packaged TOML data."""
-    defaults_file = (
-        resources.files("pup_clean.commands").joinpath("data").joinpath("defaults.toml")
+    defaults_file = resources.files("pup_clean").joinpath(
+        "data",
+        "cleanup_defaults.toml",
     )
 
     return tomllib.loads(defaults_file.read_text(encoding="utf-8"))

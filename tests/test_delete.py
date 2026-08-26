@@ -6,7 +6,7 @@ from pup_core.base.types import RepositoryContext
 from pytest import CaptureFixture
 
 from pup_clean.base.types import CleanupTarget
-from pup_clean.delete.terminal import print_cleanup_plan
+from pup_clean.delete_terminal import print_cleanup_plan
 
 
 def _repository_context(tmp_path: Path) -> RepositoryContext:

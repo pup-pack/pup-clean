@@ -42,7 +42,7 @@ before release.
    documentation output.
 2. **Source inspection** examines Python files under `src/` and identifies
    statically resolvable files created by known data-writing,
-   database-writing, and image-writing operations.
+   database-creation, and image-writing operations.
 
 This allows cleanup behavior to follow what a particular project actually
 generates rather than assuming that a directory has the same role in every
