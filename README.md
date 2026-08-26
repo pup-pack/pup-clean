@@ -1,4 +1,4 @@
-# pup-clean: Professional Python Project: Instructor Repo Cleaner
+# pup-clean: Professional Python Project Cleaner
 
 [![PyPI](https://img.shields.io/pypi/v/pup-clean?logo=pypi&label=pypi)](https://pypi.org/project/pup-clean/)
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://pup-pack.github.io/pup-clean/)
@@ -24,14 +24,15 @@ width="110">
 
 ## Purpose
 
-`pup-clean` prepares instructor repositories for release as student project
-templates.
+`pup-clean` prepares professional Python repositories for release, distribution,
+reuse, or publication.
 
 It removes known disposable development artifacts and inspects project source
-code to discover generated data, database, and image artifacts that should not
-be included in the student version of the repository.
+code to discover generated data, database, and image artifacts that may not
+belong in the cleaned repository.
 
 Dry run is the default.
+
 Nothing is deleted unless `--delete` is provided.
 
 ## Clean a Repository
