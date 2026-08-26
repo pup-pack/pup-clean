@@ -26,12 +26,10 @@ url: "https://github.com/pup-pack/pup-clean"
 license: MIT
 
 abstract: >
-  Command-line tool for preparing a professional Python teaching repository
-  for student use by removing instructor-generated evidence and artifacts.
-  pup-clean removes known development residue such as project.log and
-  discovers project-specific generated artifacts by inspecting Python source
-  code, allowing the instructor repository to be cleaned before release as
-  a student project template.
+  Command-line tool for cleaning professional Python repositories before
+  release, distribution, reuse, or publication. pup-clean removes known
+  development residue such as project.log and discovers project-specific
+  generated artifacts by inspecting Python source code.
 
 keywords:
   - repository-cleanup

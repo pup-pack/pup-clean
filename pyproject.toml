@@ -11,7 +11,7 @@ name = "pup-clean"
 readme = "README.md"
 requires-python = ">=3.15"
 dynamic = ["version"] # WHY: Version is computed from git tags at build time.
-description = "Command-line tool for preparing instructor Python repositories for student release by removing generated evidence and artifacts."
+description = "Command-line tool for preparing Python repositories for release by removing generated evidence and artifacts."
 license-files = ["LICENSE"]
 authors = [
     { name = "Denise Case" },

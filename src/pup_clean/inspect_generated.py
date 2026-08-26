@@ -5,8 +5,7 @@ paths passed to known data-writing, database-creation, and image-writing
 operations.
 
 The purpose is to identify artifacts created by running a project so that
-pup-clean can remove instructor-generated outputs before a repository is
-published.
+pup-clean can remove generated outputs.
 
 Only statically resolvable generated file paths are returned.
 Containing directories are not cleanup targets.
